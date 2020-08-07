@@ -58,21 +58,23 @@ Note that this is the _total_ time that the slide is visible, including the tran
 
 ### slides move left-to-right
 
-in carousel.css:
+Make changes in carousel.css:
 
-`
+```
 .carousel-slide {
 transform: translateX(-100%);
 }
 
 #carousel .offscreen-left {
 transform: translateX(100%);
-}  
-`
+}
+```
 
 ### slides move vertically
 
-`
+Make changes in carousel.css:
+
+```
 .carousel-slide {
 transform: translateY(100%);
 }
@@ -80,7 +82,7 @@ transform: translateY(100%);
 #carousel .offscreen-left {
 transform: translateY(-100%);
 }
-`
+```
 
 Notes:
 
@@ -89,7 +91,7 @@ Notes:
 
 Moving the navigation dots to a vertical position is a little more involved:
 
-`
+```
 #carousel {
 flex-direction: row;
 }
@@ -106,5 +108,6 @@ flex-direction: column;
 width: 5%;
 height: 100%;
 }
-`
+```
+
 You'll probably also want to change the arrow symbols in index.html too.

@@ -1,7 +1,10 @@
 .content {
-    background-color: gray;
-    color: blue;
-    font-size: 2rem;
+    background-color: darkgreen;
+    border-radius: 30px;
+    color: antiquewhite;
+    height: 90%;
+    font-size: 3rem;
+    margin: 10px;
     text-align: center;
-    width: 100%;
+    width: 90%;
 }

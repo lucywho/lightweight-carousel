@@ -6,16 +6,16 @@
 
 #carousel {
     height: auto;
-    min-height: 600px;
     position: relative;
     overflow: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    object-fit: cover;
 
-    border: 2px solid red;
+    min-height: 500px;
+    border: 5px solid navy;
 }
 
 .carousel-slide {
@@ -26,14 +26,14 @@
 
     top: 0;
     left: 0;
-    height: 95%;
     width: 100%;
+    height: 95%;
 
     transform: translateX(100%);
 }
 
 #carousel .onscreen {
-    animation: fadeIn 3.5s forwards;
+    animation: fadeIn 4s forwards;
     transform: translateX(0);
     transition-property: transform;
     transition-duration: 4s;
@@ -41,7 +41,7 @@
 }
 
 #carousel .offscreen-left {
-    animation: fadeOut 3.5s forwards;
+    animation: fadeOut 4s forwards;
     transform: translateX(-100%);
     transition-property: transform;
     transition-duration: 4s;
@@ -70,6 +70,7 @@
     position: absolute;
     bottom: 0;
     display: flex;
+    flex-direction: row;
     height: 5%;
     width: 100%;
     justify-content: space-around;
@@ -81,7 +82,6 @@
     border-radius: 50%;
     height: 20px;
     width: 20px;
-    /* margin: 0 20%; */
 }
 
 .fill-in {

@@ -7,7 +7,7 @@
     let timer;
     let isTransitioning = false;
 
-    timer = setTimeout(moveSlide, 5000);
+    timer = setTimeout(moveSlide, 7000);
 
     function moveSlide(index) {
         isTransitioning = true;
@@ -72,4 +72,4 @@
             isTransitioning = false;
         }
     });
-})(); //end of IFEE do not delete!
+})();

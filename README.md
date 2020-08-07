@@ -4,7 +4,7 @@ This is a straightforward carousel written in vanilla JavaScript. Slides are sho
 
 Instructions on how to switch to left-to-right or vertical display are given below.
 
-Navigation dots allow the user to switch between slides at will. Clicking is disabled during transition to prevent race conditions developing.
+Navigation dots allow the user to switch between slides at will, and arrows allow navigation back and forth one slide at a time. Clicking is disabled during transition to prevent race conditions developing.
 
 ## Basic structure
 
@@ -41,7 +41,7 @@ This stylesheet styles the carousel elements.
 
 `@keyframes fadeIn` and `fadeOut` : sets the fade animations.
 
-`#dots` : styles the container for the navigation dots. Currently set to sit at the bottom on the carousel div.
+`#dots` : styles the container for the navigation dots. Currently set to sit horizontally at the bottom on the carousel div. There are instructions below on how to set it vertically the right hand side.
 
 `.dots` and `.fill-in` style the navigation dots. You may prefer to move this code to your own stylesheet.
 
@@ -60,7 +60,7 @@ Note that this is the _total_ time that the slide is visible, including the tran
 
 in carousel.css:
 
-``
+`
 .carousel-slide {
 transform: translateX(-100%);
 }
@@ -68,11 +68,11 @@ transform: translateX(-100%);
 #carousel .offscreen-left {
 transform: translateX(100%);
 }  
-``
+`
 
 ### slides move vertically
 
-``
+`
 .carousel-slide {
 transform: translateY(100%);
 }
@@ -80,6 +80,7 @@ transform: translateY(100%);
 #carousel .offscreen-left {
 transform: translateY(-100%);
 }
+`
 
 Notes:
 
@@ -88,7 +89,7 @@ Notes:
 
 Moving the navigation dots to a vertical position is a little more involved:
 
-``
+`
 #carousel {
 flex-direction: row;
 }
@@ -99,10 +100,11 @@ height: 100%;
 }
 
 #dots {
-/_bottom: 0_/
+~~bottom: 0;~~
 right: 0;
 flex-direction: column;
 width: 5%;
 height: 100%;
 }
-``
+`
+You'll probably also want to change the arrow symbols in index.html too.

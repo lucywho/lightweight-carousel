@@ -66,6 +66,29 @@
         };
     }
 
+    document
+        .getElementById("right")
+        .addEventListener("click", function rightClick(arrowIndex) {
+            console.log("right clicked");
+            if (isTransitioning) {
+                return;
+            } else {
+                for (let d = 0; d < dots.length; d++) {
+                    dots[d].classList.remove("fill-in");
+                }
+            }
+
+            dots[i].classList.add("fill-in");
+            clearTimeout(timer);
+            moveSlide();
+        });
+
+    document
+        .getElementById("left")
+        .addEventListener("click", function leftClick() {
+            console.log("left clicked");
+        });
+
     document.addEventListener("transitionend", function(event) {
         if (event.target.classList.contains("offscreen-left")) {
             event.target.classList.remove("offscreen-left");

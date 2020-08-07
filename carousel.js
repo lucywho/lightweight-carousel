@@ -68,8 +68,7 @@
 
     document
         .getElementById("right")
-        .addEventListener("click", function rightClick(arrowIndex) {
-            console.log("right clicked");
+        .addEventListener("click", function rightClick() {
             if (isTransitioning) {
                 return;
             } else {
@@ -86,7 +85,22 @@
     document
         .getElementById("left")
         .addEventListener("click", function leftClick() {
-            console.log("left clicked");
+            if (isTransitioning) {
+                return;
+            } else {
+                for (let d = 0; d < dots.length; d++) {
+                    dots[d].classList.remove("fill-in");
+                }
+            }
+            if (i === 0) {
+                index = dots.length - 1;
+            } else {
+                index = i - 1;
+            }
+
+            dots[i].classList.add("fill-in");
+            clearTimeout(timer);
+            moveSlide(index);
         });
 
     document.addEventListener("transitionend", function(event) {

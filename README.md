@@ -49,8 +49,8 @@ This stylesheet styles the carousel elements.
 
 This script handles the timing, transitions, and navigation dots. If you want to change the time each slide displays, edit
 
-Line 10 for the first slide when the page loads (currently 7s)
-Line 47 for subsequent slides (also 7s)
+-   Line 10 for the first slide when the page loads (currently 7s)
+-   Line 47 for subsequent slides (also 7s)
 
 Note that this is the _total_ time that the slide is visible, including the transition time. The transition time is 4s (set in carousel.css), so the visible slide is stationary for 3s.
 

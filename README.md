@@ -54,9 +54,9 @@ This stylesheet styles the carousel elements.
 This script handles the timing of the carousel, and the behaviour of the navigation dots.
 
 -   Line 10 sets how long the first slide is visible for when the page loads (currently 7s)
--   Line 47 set the timing for subsequent slides (also 7s)
+-   Line 47 set the timing for subsequent slides (also 7s). Note that this setTimeout is wrapped in a `window.requestAnimationFrame`function: this prevents the code from continuing to run in the background when the user navigates away from the window.
 
-Note that this is the _total_ time that the slide is visible, including the transition time. The transition time is 4s (set in carousel.css), so each slide is stationary for 3s. Adjust these timings to suit your own content.
+Note that this is the _total_ time that the slide is visible, including the transition time. The transition time in the example code is set to 4s (set in carousel.css), so each slide is stationary for 3s. Adjust these timings to suit your own content.
 
 ## Adjust direction of carousel
 
